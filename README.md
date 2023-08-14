@@ -33,3 +33,8 @@ this is the structure of a json file:
   "mainscene": "exampleScene" /*/Optional, initial scene to play/*/
 }
 ```
+
+Please note that the initial scene should not have a video, because many browsers disable autoplay before user interaction.
+
+How to use a custom json parser:
+<br>`game('myGame.json', MyJson.parse)`
