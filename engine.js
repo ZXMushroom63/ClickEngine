@@ -96,6 +96,7 @@ async function game(gameJsonUrl, jsonParser = JSON.parse) {
 
   game["video"] = document.createElement("video");
   game["video"].controls = false;
+  game["video"].draggable = false;
   game["video"].addEventListener("click", (e)=>{e.preventDefault()});
   game["video"].addEventListener("contextmenu", (e)=>{e.preventDefault()});
   game["video"].id = "clickengine_video";
