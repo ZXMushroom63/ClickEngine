@@ -19,7 +19,7 @@ this is the structure of a json file:
       "bg": "example.png", /*/Optional, if there is no video, use an image instead./*/
       "buttons": [
         {
-          "scene": "exampleScene", /*/Optional, the scene id to play onclick./*/
+          "scene": "exampleScene", /*/Optional, the scene id to play onclick. If you pass an array, it will pick a random element./*/
           "label": "A Label!!!" /*/Required/*/
           "onclick": "alert('Hello World')", /*/Optional, script to run on button clicked./*/
           "icon": "icon.png", /*/Optional, image to display on button./*/
