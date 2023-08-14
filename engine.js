@@ -60,6 +60,18 @@ async function game(gameJsonUrl, jsonParser = JSON.parse) {
     });
   }
 
+  game["remove_dupes"]=function () {
+    if(document.getElementById("clickengine_video")){
+      document.getElementById("clickengine_video").remove();
+    }
+    if(document.getElementById("clickengine_style")){
+      document.getElementById("clickengine_style").remove();
+    }
+    if(document.getElementById("clickengine_buttons")){
+     document.getElementById("clickengine_buttons").remove(); 
+    }
+  }
+
   game["startgame"]=function () {
 
     if(game.data.onstart){
@@ -79,6 +91,8 @@ async function game(gameJsonUrl, jsonParser = JSON.parse) {
   textContent = textContent.replaceAll(",]", "]");
   textContent = textContent.replaceAll(",}", "}");
   game.data = jsonParser(textContent);
+
+  game["remove_dupes"]();
 
   game["video"] = document.createElement("video");
   game["video"].controls = false;
