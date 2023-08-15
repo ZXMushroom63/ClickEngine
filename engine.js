@@ -88,8 +88,6 @@ async function game(gameJsonUrl, jsonParser = JSON.parse) {
   var c = await fetch(gameJsonUrl);
   var d = await c.blob();
   var textContent = await d.text();
-  textContent = textContent.replaceAll(",]", "]");
-  textContent = textContent.replaceAll(",}", "}");
   game.data = jsonParser(textContent);
 
   game["remove_dupes"]();
